@@ -91,7 +91,7 @@ char getchar()
 }
 
 void scan(char string[])
-{   
+{
     // Prep input loop
     char c = getchar();
     int length = 0;
@@ -108,7 +108,7 @@ void scan(char string[])
 
         // If length of string greater than or equal to max
         // string length, including null char, break
-        if(length >= (STRING_LENGTH - 1))
+        if (length >= (STRING_LENGTH - 1))
             break;
 
         // Get next character

@@ -107,7 +107,8 @@ int kernel()
 
 #endif
 
-void schedule()
+/** Round-robin scheduling algorithm */
+int schedule()
 {
     // Start searching from the PID after the previously run user process
     // If no previous process exists, start from the beginning
@@ -121,7 +122,7 @@ void schedule()
     for (int i = 0; i < MAX_PROCS; i++)
     {
         int pid = (start + i) % MAX_PROCS; // PID of next process
-        proc_t *current = &processes[pid]; // Get process with the PID
+        proc_t *current = &processes[pid]; // Get process with PID
 
         // Only select user processes that are ready to run
         if (current->type == PROC_TYPE_USER && current->status == PROC_STATUS_READY)
@@ -163,7 +164,7 @@ void yield()
 
 void exit()
 {
-    // If the running process is a user process, terminate it and switch to kernel
+    // If the running process is a user process
     if (runningprocess->type == PROC_TYPE_USER)
     {
         // Mark the current process as terminated so it won't be scheduled again
@@ -172,11 +173,10 @@ void exit()
         // Select the kernel process to run next
         nextprocess = kernelprocess;
 
-        // Context switch to the kernel process
+        // Context switch to kernel process
         contextswitch();
     }
 
-    // If the kernel process calls exit, simply return (ends the OS)
     return;
 }
 
