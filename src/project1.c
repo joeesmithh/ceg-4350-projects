@@ -60,6 +60,21 @@ char putchar(char character)
 */
 int print(char string[])
 {
+    // Clear next 4 lines before printing from top of screen
+    if (cursorRow < ROWS - 3)
+    {
+        // Save current global cursor position
+        int col = cursorCol;
+        int row = cursorRow;
+
+        // Print blank spaces
+        for (int i = 0; i < COLS * 4; i++)
+            putchar(' ');
+
+        // Reset global cursor position
+        setCursor(col, row);
+    }
+
     int i = 0;            // Iterator
     char cur = string[i]; // Current character
 
