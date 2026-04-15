@@ -3,7 +3,7 @@
 #if PROJECT == 6
 int kernel()
 {
-    startkernel(startshell); // initialize kernel and launch the shell as the first process
+    startkernel(startshell);
     return 0;
 }
 #endif

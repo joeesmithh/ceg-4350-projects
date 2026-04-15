@@ -3,3 +3,4 @@
 /lecture-code
 /.*
 *.md
+!/resources/*.md
