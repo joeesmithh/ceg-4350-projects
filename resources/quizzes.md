@@ -145,14 +145,14 @@
 
 ## Quiz 7 (CPU Scheduling)
 
-| 1.  | PID | Arrival Time | Burst Time |
-| --- | --- | ------------ |
-| P1  | 0   | 4            |
-| P2  | 2   | 4            |
-| P3  | 5   | 2            |
-    
-    **Using the table above, use the FIFO (First-In-First-Out) scheduling algorithm to calculate the average waiting time for all processes.**
+1. **Using the table below, use the FIFO (First-In-First-Out) scheduling algorithm to calculate the average waiting time for all processes.**
 
+    | PID | Arrival Time | Burst Time |
+    | --- | ------------ | ---------- |
+    | P1  | 0            | 4          |
+    | P2  | 2            | 4          |
+    | P3  | 5            | 2          |
+    
     ---
 
     **P1:** 0 -> 4 (0 left)<br>
@@ -169,13 +169,13 @@
     
     **Average wait:** (0 + 2 + 3) / 3 = 1.67
 
-| 2.  | PID | Arrival Time | Burst Time |
-| --- | --- | ------------ |
-| P1  | 0   | 6            |
-| P2  | 1   | 4            |
-| P3  | 2   | 3            |
+2. **Using the table below, use the Round Robin scheduling algorithm with quanta = 2 to calculate the average waiting time for all processes.**
 
-    **Using the table above, use the Round Robin scheduling algorithm with quanta = 2 to calculate the average waiting time for all processes.**
+    | PID | Arrival Time | Burst Time |
+    | --- | ------------ | ---------- |
+    | P1  | 0            | 6          |
+    | P2  | 1            | 4          |
+    | P3  | 2            | 3          |
 
     ---
 
@@ -193,15 +193,15 @@
 
     **Average Wait:** (7 + 5 + 6) / 3 = 18/3 = 6
 
-| 3.  | PID | Arrival Time | Burst Time |
-| --- | --- | ------------ |
-| P1  | 0   | 8            |
-| P2  | 3   | 2            |
-| P3  | 2   | 4            |
-
-    **Using the table above, use the Shortest Remaining Time (preemtive) scheduling algorithm to calculate the average waiting time for all processes.**
+3. **Using the table above, use the Shortest Remaining Time (preemtive) scheduling algorithm to calculate the average waiting time for all processes.**
 
     **Explain why or why not the average waiting time could be improved by selecting a different scheduling algorithm with the processes provided.**
+
+    | PID | Arrival Time | Burst Time |
+    | --- | ------------ | ---------- |
+    | P1  | 0            | 8          |
+    | P2  | 3            | 2          |
+    | P3  | 2            | 4          |
 
     ---
 
