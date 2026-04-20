@@ -26,6 +26,7 @@
   - [Quiz 21 (Networks)](#quiz-21-networks)
   - [Quiz 22 (Networks)](#quiz-22-networks)
   - [Quiz 23 (Networks)](#quiz-23-networks)
+  - [Quiz 24 (Distributed File Systems)](#quiz-24-distributed-file-systems)
 
 
 ## Quiz 1 (Introduction)
@@ -516,3 +517,17 @@
 3. **What is a distributed file system?**
 
     A distributed file system is when you have files accessed over a network. Typically this involves a file server where many clients connect to to read and write files.
+
+## Quiz 24 (Distributed File Systems)
+
+1. **Did we discuss a distributed file system naming scheme that is NOT location transparent? If so, why is it NOT location transparent?**
+
+    Yes, the absolute naming scheme is NOT location transparent. This is because you deliberately have to specify the address of the server you are trying to access. If the location of the server changes, you have use a different name for the file you want to access.
+
+2. **When would someone use the absolute naming scheme over the mount point naming scheme?**
+
+    You would use the absolute naming scheme over the mount point naming scheme if you only have I server and I client. When there is I server and I client, it is very easy to manage file accesses by identifying the server directly. This is opposed to 1 server and hundreds of clients. If you have hundreds of clients and the server location changes, you have to inform hundreds of clients of this change.
+
+3. **When would someone use the global namespace naming scheme over the mount point naming scheme?**
+
+    You would use the global namespace naming scheme if you absolutely need all files to appear identical for all users. In the mount point naming scheme, files may have different paths for every client, which can cause problems if you are running programs or scripts that depend on these file paths.
